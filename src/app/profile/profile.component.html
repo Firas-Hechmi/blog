@@ -1,0 +1,75 @@
+<button type="button" class="back-btn" (click)="back()">Back</button>
+<div class="a">
+<div class="title">
+    <h2>Update</h2>
+  </div>
+<form [formGroup]="updateForm" (ngSubmit)="onUpdate()" class="updateForm">
+    <table>
+        <tr>
+          <td><label>First name</label></td>
+          <td><input type="text" formControlName="firstName"></td>
+        </tr>
+        <tr>
+            <td><label>Last name</label></td>
+            <td><input type="text" formControlName="lastName"></td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td><select formControlName="gender">
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Birthday</label></td>
+            <td><input type="date" formControlName="birthday"></td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="email" formControlName="email"></td>
+          </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" formControlName="password"></td>
+        </tr>
+    </table>
+    <button type="submit" [disabled]="updateForm.invalid">update</button>
+</form>
+</div>
+<div class="newBlog">
+   <h2 *ngIf="edit.disabled">New blog</h2>
+   <h2 *ngIf="!edit.disabled">Update blog</h2>
+   <form [formGroup]="blogForm" (ngSubmit)="onSubmitBlogForm()">
+       <table>
+           <tr> 
+            <td><label>image</label></td>
+            <td ><input type="text" formControlName="image" ></td>
+           </tr>
+           <tr>
+            <td><label>Title</label></td>
+            <td><input type="text" formControlName="title"></td>
+           </tr>
+           <tr>
+            <td><label>Content</label></td>
+            <td><textarea formControlName="content"></textarea></td>
+           </tr>
+       </table>
+       <button type="submit" *ngIf="edit.disabled" [disabled]="blogForm.invalid">Add</button>
+       <button type="submit" style="background-color: orange;" *ngIf="!edit.disabled" [disabled]="blogForm.invalid">Edit</button>
+       <button type="button"  style="background-color: crimson;" *ngIf="!edit.disabled" (click)="onCancel()">Cancel</button>
+   </form>
+</div>
+<div class="blogs">
+ <h2 style="margin-bottom:20px">Your blogs</h2>
+ <div class="blog" *ngFor="let blog of yourBlogs;let i=index"> 
+     <img [src]="blog.image">
+     <p>{{blog.title}}</p>
+     <span style="color: green;margin-right:5px ;">{{blog.likes}} likes/</span>
+     <span style="color: crimson;">{{blog.dislikes}} dislikes</span>
+     <div class="blog-buttons">
+        <button style="background-color: crimson;" (click)="onDelete(blog.id,i)">Delete</button>
+        <button style="background-color: orange;" (click)="onEdit(blog.id,i)">Edit</button>
+     </div>
+     
+ </div>
+</div>

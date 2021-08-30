@@ -1,0 +1,7 @@
+<div class="blog" *ngFor="let blog of blogs">
+    <img [src]="blog.image">
+    <p>{{blog.title}}</p>
+    <span style="color: green;margin-right:5px;margin-left: 5px ;">{{blog.likes}} likes/</span>
+    <span style="color: crimson;">{{blog.dislikes}} dislikes</span><br>
+    <a [routerLink]="[blog.id]">read more</a>
+</div>

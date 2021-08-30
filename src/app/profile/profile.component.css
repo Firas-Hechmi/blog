@@ -1,0 +1,89 @@
+.a{
+    width: 30%;
+    margin-right: 15%;
+}
+.title{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;  
+}
+.updateForm{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 0px 0px 10px 10px;
+  
+}
+td{
+    padding: 5px;
+
+}
+input{
+    width: 170%;
+}
+.newBlog input{
+    width: 200px;
+}
+textarea{
+    width: 500px;
+    height: 100px;
+}
+.newBlog button,.a button,.back-btn{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog button{
+    color: white;
+    padding: 3px;
+    margin: 2px;
+}
+.blog-buttons{
+    text-align: center;
+}
+.back-btn{
+    margin-bottom:20px ;
+    border-radius:50% 0px 0px 50% ;
+    width: 100px;
+}
+.newBlog{
+    border: 2px solid black;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.newBlog,.a{
+    display: inline-block;
+    vertical-align: top;
+}
+.blogs{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.blog{
+    border: 1px solid black;
+    width: 20%;
+    height: 240px;
+    display: inline-block;
+    margin-left: 4%;
+    margin-bottom: 50px;
+    text-overflow: ellipsis;
+    overflow:hidden ;
+}
+img{
+    width: 100%;
+    height: 150px;
+}

@@ -1,0 +1,52 @@
+.title{
+    background-color: black;
+    color: white;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+form{
+    width: 30%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    padding: 5px;
+}
+input{
+    width: 170%;
+}
+button{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.back-btn{
+    margin-bottom:20px ;
+    border-radius:50% 0px 0px 50% ;
+    width: 100px;
+}
+.error{
+    width: 20%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    margin-top: 20px;
+}

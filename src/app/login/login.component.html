@@ -1,0 +1,21 @@
+<button type="button" class="back-btn" (click)="back()">Back</button>
+<div class="title">
+    <h2>Login</h2>
+  </div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
+    <table>
+        <tr>
+          <td><label>Email</label></td>
+          <td><input type="email" formControlName="email"></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" formControlName="password" ></td>
+        </tr>
+    </table>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+
+<div class="error" *ngIf="error">
+    Member not found :( !!
+</div>

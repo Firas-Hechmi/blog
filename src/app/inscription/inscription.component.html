@@ -1,0 +1,36 @@
+<button type="button" class="back-btn" (click)="back()">Back</button>
+<div class="title">
+    <h2>Sign up</h2>
+  </div>
+<form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+          <td><label>First name</label></td>
+          <td><input type="text" formControlName="firstName"></td>
+        </tr>
+        <tr>
+            <td><label>Last name</label></td>
+            <td><input type="text" formControlName="lastName"></td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td><select formControlName="gender">
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Birthday</label></td>
+            <td><input type="date" formControlName="birthday"></td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="email" formControlName="email"></td>
+          </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" formControlName="password"></td>
+        </tr>
+    </table>
+    <button type="submit" [disabled]="inscriptionForm.invalid">Sign up</button>
+</form>

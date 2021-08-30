@@ -1,0 +1,20 @@
+<header>
+    <h1>
+        Blog
+    </h1>
+    <div class="nav-bar">
+      <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <input type="text" formControlName="searchWord" placeholder="Search for a blog">
+        <button type="submit" class="search-btn" [disabled]="searchForm.invalid">Search</button>
+      </form>
+     
+    </div>
+    <div *ngIf="!isConnected">
+      <a routerLink="inscription">Sign up</a>
+      <a routerLink="login">Login</a>
+     </div>
+    <div *ngIf="isConnected">
+        <a routerLink="profile">{{connectedMember.firstName}}</a>
+        <button (click)="deconnexion()" class="deconnexion-btn">Deconnexion</button>
+    </div>
+</header>
